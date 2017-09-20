@@ -1,1 +1,2 @@
-<p>{{name}}</p>
+<p *ngIf="name !== undefined">{{name}}</p>
+<p *ngIf="name === undefined">Kein Name wurde uebergeben!</p>

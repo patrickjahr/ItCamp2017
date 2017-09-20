@@ -10,7 +10,7 @@ export class AppComponent {
   liste: string[];
 
   constructor() {
-    this.liste = ["Angular","React","Vue"];
+    this.liste = ["Angular",undefined,"Vue"];
   }
 
 }
