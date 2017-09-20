@@ -1,11 +1,2 @@
 <app-header></app-header>
-<div class="content">
-    <div class="list-wrapper">
-        <div *ngFor="let person of liste" (click)="openPerson(person)">
-            <app-list-item [person]="person"></app-list-item>
-        </div>
-    </div>
-    <div class="person" [hidden]="!currentPerson">
-        <app-starwars-detail [person]="currentPerson"></app-starwars-detail>
-    </div>
-</div>
+<router-outlet></router-outlet>

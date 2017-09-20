@@ -9,7 +9,6 @@ import { StarWarsPerson } from 'models/starwarsPerson';
 export class ListItemComponent implements OnInit {
 
   @Input()person: StarWarsPerson;
-
   constructor() { }
 
   ngOnInit() {

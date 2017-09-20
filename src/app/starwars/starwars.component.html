@@ -1,0 +1,14 @@
+<div class="content" (window:resize)="onResize($event)">
+    <div class="list-wrapper" [hidden]="!showList">
+        <input id="search" name="search" [(ngModel)]="searchText" type="search" required />
+        <div *ngFor="let person of liste" (click)="openPerson(person)">
+            <div class="{{person.name | stringvisibility : searchText}}">
+                <app-list-item [person]="person"></app-list-item>
+            </div>
+        </div>
+    </div>
+    <div class="person" [hidden]="!currentPerson">
+        <a class="close-btn waves-effect waves-teal btn-flat" (click)="closePerson()"><i class="mdi mdi-close"></i></a>
+        <app-starwars-detail [person]="currentPerson"></app-starwars-detail>
+    </div>
+</div>
