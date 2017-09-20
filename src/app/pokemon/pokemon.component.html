@@ -1,3 +1,14 @@
-<p>
-  pokemon works!
-</p>
+<div class="content" (window:resize)="onResize($event)">
+  <div class="list-wrapper" [hidden]="!showList">
+    <input id="search" name="search" [(ngModel)]="searchText" type="search" required />
+    <div *ngFor="let pokemon of liste" (click)="openPerson(pokemon)">
+      <div class="{{pokemon.name | stringvisibility : searchText}}">
+        <app-list-item [name]="pokemon.name"></app-list-item>
+      </div>
+    </div>
+  </div>
+  <div class="person" [hidden]="!currentPokemon">
+    <a class="close-btn waves-effect waves-teal btn-flat" (click)="closePerson()"><i class="mdi mdi-close"></i></a>
+    <app-pokemon-detail [pokemon]="currentPokemon"></app-pokemon-detail>
+  </div>
+</div>

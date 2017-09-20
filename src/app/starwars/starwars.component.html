@@ -3,7 +3,7 @@
         <input id="search" name="search" [(ngModel)]="searchText" type="search" required />
         <div *ngFor="let person of liste" (click)="openPerson(person)">
             <div class="{{person.name | stringvisibility : searchText}}">
-                <app-list-item [person]="person"></app-list-item>
+                <app-list-item [name]="person.name"></app-list-item>
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@ export class StarwarsComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchText = '';
-    this.showList = window.innerWidth < 960 && this.currentPerson === undefined;
+    this.showList = window.innerWidth > 960 || this.currentPerson === undefined;
     this._starWarsService.GetPeople().subscribe(list => {
       this.liste = list;
     })
@@ -34,6 +34,6 @@ export class StarwarsComponent implements OnInit {
   }
 
   onResize(event) {
-    this.showList = window.innerWidth < 960 && this.currentPerson === undefined;
+    this.showList = window.innerWidth > 960 || this.currentPerson === undefined;
   }
 }

@@ -12,6 +12,8 @@ import { ListItemComponent } from 'app/starwars/list-item/list-item.component';
 import { StarwarsDetailComponent } from 'app/starwars/starwars-detail/starwars-detail.component';
 import { AppRoutingModule } from 'app/app-routing.module';
 import { FormsModule } from '@angular/forms';
+import {PokemonService} from "../services/pokemon.service";
+import { PokemonDetailComponent } from './pokemon/pokemon-detail/pokemon-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     StarwarsDetailComponent,
     TextToVisabilityPipe,
     StarwarsComponent,
-    PokemonComponent
+    PokemonComponent,
+    PokemonDetailComponent
   ],
   imports: [
     HttpModule,
@@ -29,7 +32,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [StarwarsService],
+  providers: [StarwarsService, PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

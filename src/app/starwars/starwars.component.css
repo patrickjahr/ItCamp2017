@@ -1,12 +1,13 @@
 .content{
     display: flex;
     width: 100%;
-    padding: 8px;
 }
 .list-wrapper {
-    width: 360px;
-    height: calc(100vh - 68px);
-    overflow: scroll;
+  width: 360px;
+  height: calc(100vh - 68px);
+  overflow: scroll;
+  padding: 8px;
+  border-right: 1px solid lightgray;
 }
 .close-btn {
     float: right;

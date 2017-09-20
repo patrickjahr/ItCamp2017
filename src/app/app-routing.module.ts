@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { StarwarsComponent } from 'app/starwars/starwars.component';
 import { NgModule } from '@angular/core';
+import {PokemonComponent} from './pokemon/pokemon.component';
 
 const routes: Routes = [
     {
@@ -14,7 +15,7 @@ const routes: Routes = [
     },
     {
         path: 'pokemon',
-        component: StarwarsComponent
+        component: PokemonComponent
     }
 ]
 
@@ -23,4 +24,3 @@ const routes: Routes = [
     exports: [RouterModule]
   })
   export class AppRoutingModule { }
-  
