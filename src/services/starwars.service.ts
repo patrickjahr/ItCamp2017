@@ -11,13 +11,13 @@ export class StarwarsService {
   public GetPeople(): Observable<StarWarsPerson[]> {
     return Observable.create((observer) =>{
       this._http.get('https://swapi.co/api/people')
-                .map(data => data.json())
-                .subscribe(result => {
-                  const personList = result.results as StarWarsPerson[];
-                  if(personList) {
-                    observer.next(personList);
-                  }
-                });
+        .map(data => data.json())
+        .subscribe(result => {
+          const personList = result.results as StarWarsPerson[];
+          if(personList) {
+            observer.next(personList);
+          }
+        });
     });
   }
 }
