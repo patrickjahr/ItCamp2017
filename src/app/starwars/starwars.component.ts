@@ -15,7 +15,7 @@ export class StarwarsComponent implements OnInit {
 
   constructor(private _starWarsService: StarwarsService) {
   }
-  
+
   ngOnInit(): void {
     this.searchText = '';
     this.showList = window.innerWidth < 960 && this.currentPerson === undefined;
@@ -34,6 +34,6 @@ export class StarwarsComponent implements OnInit {
   }
 
   onResize(event) {
-    this.showList = window.innerWidth > 960 && this.currentPerson !== undefined;
+    this.showList = window.innerWidth < 960 && this.currentPerson === undefined;
   }
 }
