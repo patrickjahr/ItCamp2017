@@ -1,4 +1,6 @@
 <app-header></app-header>
-<div *ngFor="let i of liste">
-    <app-list-item [name]="i.name"></app-list-item>
+<div class="list-wrapper">
+    <div *ngFor="let i of liste">
+        <app-list-item [person]="i"></app-list-item>
+    </div>
 </div>

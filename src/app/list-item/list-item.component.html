@@ -1,4 +1,5 @@
+<p *ngIf="person === undefined">Kein Name wurde uebergeben!</p>
 <div class="waves-effect">
-    <p *ngIf="name !== undefined">{{name}}</p>
-    <p *ngIf="name === undefined">Kein Name wurde uebergeben!</p>
+    <p>{{person.name}}</p>
+    <p class="height">{{person.height}}</p>
 </div>

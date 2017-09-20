@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { StarWarsPerson } from 'models/starwarsPerson';
 
 @Component({
   selector: 'app-list-item',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ListItemComponent implements OnInit {
 
-  @Input()name: string;
+  @Input()person: StarWarsPerson;
 
   constructor() { }
 
