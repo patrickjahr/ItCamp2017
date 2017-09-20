@@ -1,16 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { StarWarsPerson } from 'models/starwarsPerson';
+import { StarwarsService } from 'services/starwars.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  
+  liste: StarWarsPerson[];
 
-  liste: string[];
-
-  constructor() {
-    this.liste = ["Angular",undefined,"Vue"];
+  constructor(private _starWarsService: StarwarsService) {
   }
-
+  
+  ngOnInit(): void {
+    this._starWarsService.GetPeople().subscribe(list => {
+      this.liste = list;
+    })
+  }
 }
