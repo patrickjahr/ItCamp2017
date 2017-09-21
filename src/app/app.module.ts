@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import {PokemonService} from "../services/pokemon.service";
 import { PokemonDetailComponent } from './pokemon/pokemon-detail/pokemon-detail.component';
 import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
     StarwarsComponent,
     PokemonComponent,
     PokemonDetailComponent,
-    MobileNavComponent
+    MobileNavComponent,
+    LoginComponent
   ],
   imports: [
     HttpModule,

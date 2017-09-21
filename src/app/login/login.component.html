@@ -1,0 +1,11 @@
+<div class="login-wrapper">
+  <div class="card">
+    <p>{{'Benutzername' | uppercase}}</p>
+    <input type="text" name="username" [(ngModel)]="username" />
+    <p>{{'Password' | uppercase}}</p>
+    <input type="password" name="password" [(ngModel)]="password" />
+    <button class="btn right light-blue darken-3" (click)="login()">
+      LOGIN
+    </button>
+  </div>
+</div>
