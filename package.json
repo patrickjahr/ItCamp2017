@@ -8,9 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "pre-build": "npm install -g @angular/cli@1.2.0 && npm install && npm install enhanced-resolve@3.3.0",
     "prod-build": "rimraf dist && ng build --prod --output-path=\"dist/web\" --base-href=\".\"",
-    "build": "npm run pre-build && npm run prod-build",
+    "build": "npm run prod-build",
     "clean": "rimraf node_modules dist tmp && npm cache clean",
     "clean-install": "npm run clean && npm install",
     "clean-start": "npm run clean-install && npm start",
@@ -20,7 +19,6 @@
     "build-mobile": "npm run build && npm run prepare-mobile && cd dist/mobile && cordova prepare &&  cordova build && cd ../..",
     "build-mobile-ios": "npm run build && npm run prepare-mobile && cd dist/mobile && cordova prepare ios && cordova build ios && cd ../..",
     "build-mobile-android": "npm run build && npm run prepare-mobile && cd dist/mobile && cordova prepare android && cordova build android && cd ../..",
-    "build-mobile-windows": "npm run build && npm run prepare-mobile && cd dist/mobile && cordova prepare windows && cordova build windows && cd ../..",
     "start-mobile-android": "cd dist/mobile && cordova prepare && cordova run android && cd ../..",
     "start-mobile-ios": "cd dist/mobile && cordova prepare && cordova emulate ios && cd ../.."
   },
