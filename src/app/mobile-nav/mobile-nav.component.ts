@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'models/menuItem';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-mobile-nav',
+  templateUrl: './mobile-nav.component.html',
+  styleUrls: ['./mobile-nav.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class MobileNavComponent implements OnInit {
 
   menuItems: MenuItem[];
   constructor() { }

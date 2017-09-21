@@ -1,5 +1,10 @@
 <nav>
     <div class="nav-wrapper light-blue darken-3">
         <a href="#" class="brand-logo">Angular Sample</a>
+        <ul id="nav-mobile" class="right">
+            <li *ngFor="let item of menuItems">
+                <a routerLink="{{item?.route}}" routerLinkActive="active">{{item?.name}}</a>
+            </li>
+          </ul>
     </div>
 </nav>
