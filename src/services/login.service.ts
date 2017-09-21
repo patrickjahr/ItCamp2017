@@ -23,5 +23,6 @@ export class LoginService {
   logout(){
     localStorage.removeItem('isLoggedIn');
     this.isLoggedIn.emit(false);
+    this._router.navigate(['login']);
   }
 }

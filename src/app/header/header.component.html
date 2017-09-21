@@ -5,6 +5,7 @@
             <li *ngFor="let item of menuItems">
                 <a routerLink="{{item?.route}}" routerLinkActive="active">{{item?.name}}</a>
             </li>
-          </ul>
+        </ul>
+        <button class="btn-flat right" (click)="logout()" [class.hidden]="!showLogoutButton"><i class="mdi mdi-logout"></i></button>
     </div>
 </nav>
