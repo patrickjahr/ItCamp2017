@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   login() {
     if(this.username === 'patrick.jahr' 
     && this.password === 'test123'){
+      localStorage.setItem('isLoggedIn', 'true');
       this._router.navigate(['starwars']); 
     } else {
       alert('nene');
