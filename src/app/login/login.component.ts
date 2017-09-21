@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from 'services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -11,19 +12,13 @@ export class LoginComponent implements OnInit {
   username:string;
   password:string;
 
-  constructor(private _router: Router) { }
+  constructor(private _loginService: LoginService) { }
 
   ngOnInit() {
   }
 
   login() {
-    if(this.username === 'patrick.jahr' 
-    && this.password === 'test123'){
-      localStorage.setItem('isLoggedIn', 'true');
-      this._router.navigate(['starwars']); 
-    } else {
-      alert('nene');
-    }
+    this._loginService.login(this.username, this.password);
   }
 
 }

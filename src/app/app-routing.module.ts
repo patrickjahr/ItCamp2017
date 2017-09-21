@@ -3,6 +3,7 @@ import { StarwarsComponent } from 'app/starwars/starwars.component';
 import { NgModule } from '@angular/core';
 import {PokemonComponent} from './pokemon/pokemon.component';
 import { LoginComponent } from 'app/login/login.component';
+import { AuthGuard } from 'app/auth.guard';
 
 const routes: Routes = [
     {
@@ -12,11 +13,13 @@ const routes: Routes = [
     },
     {
         path: 'starwars',
-        component: StarwarsComponent
+        component: StarwarsComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'pokemon',
-        component: PokemonComponent
+        component: PokemonComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'login',

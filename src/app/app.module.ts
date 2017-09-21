@@ -16,6 +16,8 @@ import {PokemonService} from "../services/pokemon.service";
 import { PokemonDetailComponent } from './pokemon/pokemon-detail/pokemon-detail.component';
 import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from 'app/auth.guard';
+import { LoginService } from 'services/login.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,7 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [StarwarsService, PokemonService],
+  providers: [StarwarsService, PokemonService, AuthGuard, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
